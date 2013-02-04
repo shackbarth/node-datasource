@@ -22,6 +22,8 @@ if [[  ${git_status} =~ 'Already up-to-date.' ]]
   fi
 fi
 
-git submodule update --init --recursive
 npm install
+monit stop node
+sleep 10
+monit start node
 
